@@ -1,4 +1,4 @@
-
+/*
 USE Joimar_DIU;
 CREATE TABLE TypeTravel(
   TypeTravelId int IDENTITY(1,1) PRIMARY KEY not null, 
@@ -26,6 +26,9 @@ CREATE TABLE Users(
    FOREIGN KEY (TypeUserId) REFERENCES TypeUser(TypeUserId)
    
 )
+ALTER TABLE Driver 
+ADD CONSTRAINT FK_Driver_Users 
+FOREIGN KEY (UsersId) REFERENCES Users(UsersId);
 
 CREATE TABLE Providers(
   ProvidersId int IDENTITY(1,1) PRIMARY KEY not null,
@@ -125,5 +128,8 @@ CREATE TABLE TravelSchedule(
   FOREIGN KEY (UsersId) REFERENCES Users(UsersId),
   FOREIGN KEY (DriverId) REFERENCES Driver(DriverId)
 )
-
+-- CAMBIAR EL TIPO DE DATO Y LA FECHA
+ALTER TABLE TravelSchedule ALTER COLUMN TotalTravel DECIMAL(10,0);
+ALTER TABLE Users ALTER COLUMN DoB DATE not null;
+*/
 
