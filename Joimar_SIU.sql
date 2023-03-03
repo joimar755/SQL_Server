@@ -138,5 +138,10 @@ ALTER TABLE Driver
 ADD CONSTRAINT FK_Driver_Users 
 FOREIGN KEY (DriverId) REFERENCES  Users(UsersId)
 
+--insert 
+/* 
+INSERT TypeUser(Description) values ('Admin'),('Driver');
+
+*/
 
 
