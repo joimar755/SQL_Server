@@ -131,5 +131,7 @@ CREATE TABLE TravelSchedule(
 -- CAMBIAR EL TIPO DE DATO Y LA FECHA
 ALTER TABLE TravelSchedule ALTER COLUMN TotalTravel DECIMAL(10,0);
 ALTER TABLE Users ALTER COLUMN DoB DATE not null;
-*/
+*/ 
+ALTER TABLE Driver ALTER COLUMN LicenceExpired date not null
+
 
