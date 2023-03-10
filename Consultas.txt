@@ -45,3 +45,23 @@ INSERT INTO Providers (Description,StreetAddress,PhoneNumber,ContactName,Email)V
 ('Hialeah Senior Club','2380-90 Palm Avenue','305885','Ailen Gonzalez','hialeahseniorclubinc@ymail.com'),
 ('Liberty Transport USA Corp','1490 West 49th Place W 49th Pl','305218','Zulman Perez','libertyusa3121@gmail.com'),
 ('Royal Transportation, LLC','13170 Southwest 128th Street SW 128th St','305964','Fernando Mendez','fmendez@royal-trans.com')
+
+INSERT  INTO Patient (FirstName,LastName,DoB,Identification,StreetAddress,PhoneNumber,Email,Plans,Gender) VALUES
+('FERNANDO','CUESTA','1946/02/08','223425','2700 NW 62nd St','786479','testing@testin.com','1','M'),
+('FRANCISCA','ESTRADA','1938/01/29','353536','17901 Northwest 68th Avenue','305548','','1','F'),
+('PUBLIO','LOPEZ','1954/06/10','325266','9714 Northwest 126th Terrace','786857','info@info.com','1','M'),
+('MARIA','PUPO','1961/01/22','242523','16016 Southwest 66th Terrace','786209','','4','F'),
+('AGUSTINA','FERNANDEZ','1948/07/05','266463','3331 NW 18th Terrace','786426','','2','F'),
+('VICTOR','TIRADO','2011/11/22','634788','1041 JEFFERSON DR APT G','786273','atirafo@fjha.com','5','M'),
+('BRENDEN','BENNINGER','2012/06/07','223523','172 SW 15TH RD','305910','kasf@kjas.com','5','M'),
+('JAREMY','RHODES','2010/12/10','745789','10960 SW 224th St','786352','jar@jaar.com','5','M'),
+('SEBASTIAN','BROWN JR','1949/10/24','967453','401 East Sample Road','954941','sebas@jul.com','4','M'),
+('CELESTINA','RIAL','1934/04/06','374484','70 E 10th St Apt 101','786728','oow@ois.com','2','F'),
+('ELSA','SILVA','1932/04/06','568568','7512 W 20TH AVE APT 202','305332','','3','F'),
+('TERESA','KUKELHAN','1954/12/20','843257','2801 NW 55th AV','954484','','3','F'),
+('CHRISTINE','MCKNIGHT','1957/05/03','854332','1864 NW 175TH ST','305624','chris@chir.com','3','F'),
+('MIRTA','DONATO','1942/12/18','547455','7221 West 30th Court','786877','hyuo@juk.com','6','F'),
+('LAUDELINA','DURAN','1933/12/04','457488','15955 Bass Creek Road','954437','kjhyu@jhu.com','2','F')
+
+
+
