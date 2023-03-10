@@ -39,3 +39,9 @@ iNSERT INTO TravelStatus (Description) VALUES
 ('Completed'),
 ('Scheduled'),
 ('Arrived')
+
+INSERT INTO Providers (Description,StreetAddress,PhoneNumber,ContactName,Email)VALUES
+('Reality Transportation','9456 NW 13 ST','305509','Ampara Medina','areatranson@yahoo.com'),
+('Hialeah Senior Club','2380-90 Palm Avenue','305885','Ailen Gonzalez','hialeahseniorclubinc@ymail.com'),
+('Liberty Transport USA Corp','1490 West 49th Place W 49th Pl','305218','Zulman Perez','libertyusa3121@gmail.com'),
+('Royal Transportation, LLC','13170 Southwest 128th Street SW 128th St','305964','Fernando Mendez','fmendez@royal-trans.com')
