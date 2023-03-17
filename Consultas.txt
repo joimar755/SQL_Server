@@ -1,3 +1,6 @@
+INSERT TypeUser (Description) 
+VALUES ('Admin'),('Driver');
+
 INSERT INTO Users (FirstName,LastName,DoB,PhoneNumber,Email,TypeUserId) VALUES 
 ('Franklyn','Quintero','1984/12/04','2342557','fquintero@mct.com','2'),
 ('Modesto','Satizabal','1989/06/06','4564745','msatizabal@mct.com','2'),
@@ -32,6 +35,9 @@ INSERT INTO Users (FirstName,LastName,DoB,PhoneNumber,Email,TypeUserId) VALUES
 ('Zoemia','Gonzalez','1983/10/31','5685333','zgonzalez@transportationamerica.com','1'),
 ('Lisset','Gonzalez','1983/11/01','4637784','lisset.gonzalez@gladeswestrehab.com','1');
 
+INSERT TypeTravel(Description) 
+VALUES ('Ambulatory'), ('WheelChair');
+
 iNSERT INTO TravelStatus (Description) VALUES
 ('Open'),
 ('Active'),
@@ -45,6 +51,14 @@ INSERT INTO Providers (Description,StreetAddress,PhoneNumber,ContactName,Email)V
 ('Hialeah Senior Club','2380-90 Palm Avenue','305885','Ailen Gonzalez','hialeahseniorclubinc@ymail.com'),
 ('Liberty Transport USA Corp','1490 West 49th Place W 49th Pl','305218','Zulman Perez','libertyusa3121@gmail.com'),
 ('Royal Transportation, LLC','13170 Southwest 128th Street SW 128th St','305964','Fernando Mendez','fmendez@royal-trans.com')
+
+INSERT Insurence (Description,StreetAddress,PhoneNumber,ContactName)
+VALUES ('Bill Patient','12501 Sw 26 ST','545745','Sonia Perez'),
+('Leon Medical Center Hlth Plan','2345 th 235','734658','Lorgia Torr'),
+('Salud Total','1245 sw 298','346377',''),
+('Sura','2335 sw 35 st','456433','Fernando Fins'),
+('Glades West Rehabilitation','15955 Bass Creek Road','','Fill Azur'),
+('Medisur','5200 Blue Lagoon Drive','345678','');
 
 INSERT  INTO Patient (FirstName,LastName,DoB,Identification,StreetAddress,PhoneNumber,Email,Plans,Gender) VALUES
 ('FERNANDO','CUESTA','1946/02/08','223425','2700 NW 62nd St','786479','testing@testin.com','1','M'),
