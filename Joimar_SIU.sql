@@ -26,9 +26,7 @@ CREATE TABLE Users(
    FOREIGN KEY (TypeUserId) REFERENCES TypeUser(TypeUserId)
    
 )
-ALTER TABLE Driver 
-ADD CONSTRAINT FK_Driver_Users 
-FOREIGN KEY (UsersId) REFERENCES Users(UsersId);
+
 
 CREATE TABLE Providers(
   ProvidersId int IDENTITY(1,1) PRIMARY KEY not null,
@@ -46,10 +44,12 @@ CREATE TABLE Driver(
   DriverLicence VARCHAR(100) not null,
   LicenceExpired date DEFAULT(getdate()) not null,
   ProvidersId int not null,
+  UsersId int not null
   AddedOn date DEFAULT(getdate()) not null,
   Modified date DEFAULT(getdate()) not null,
   Active bit DEFAULT ((1)) not null
   FOREIGN KEY (ProvidersId) REFERENCES  Providers(ProvidersId)
+  FOREIGN KEY (DriverId) REFERENCES  Users(UsersId)
   
 )
 
@@ -132,6 +132,11 @@ CREATE TABLE TravelSchedule(
 ALTER TABLE TravelSchedule ALTER COLUMN TotalTravel DECIMAL(10,0);
 ALTER TABLE Users ALTER COLUMN DoB DATE not null;
 */ 
+/*
+ALTER TABLE Driver 
+ADD CONSTRAINT FK_Driver_Users 
+FOREIGN KEY (UsersId) REFERENCES Users(UsersId);
+*/
 ALTER TABLE Driver ALTER COLUMN LicenceExpired date not null
 -- Añadir Relacion de las dos primary key
 ALTER TABLE Driver 
