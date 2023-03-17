@@ -1,0 +1,98 @@
+INSERT INTO Users (FirstName,LastName,DoB,PhoneNumber,Email,TypeUserId) VALUES 
+('Franklyn','Quintero','1984/12/04','2342557','fquintero@mct.com','2'),
+('Modesto','Satizabal','1989/06/06','4564745','msatizabal@mct.com','2'),
+('Reinaldo','Rapallo','1995/04/06','6786933','rrapallo@mct.com','2'),
+('Hugo','Osorno','1975/10/16','9009121','hosorno@mct.com','2'),
+('Marea','Omer','1995/04/04','11231309','omao@transportationamerica.com','2'),
+('Yeldrys ','campos ','1977/10/04','13453497','yeldrys00@gmail.com','2'),
+('Juan','Velasquez','1967/12/31','15675685','jucarvem@gmail.com','2'),
+('osmani','vazquez','1979/01/30','17897873','mannylafigura3@gmail.com','2'),
+('Ernesto','Abello','1970/06/23','20120061','ernestosevillano@yahoo.com','2'),
+('Ernesto','Molina','1939/06/27','22342249','areality@mct.com','2'),
+('Liria','Lamas','1968/01/22','24564437','lirialamas018@gmail.com','2'),
+('Jhonny','Socorro','1996/07/25','26786625','jhonny.socorro@yahoo.com','2'),
+('Fortunata ','Lopez Camara','1960/10/14','','fortunata.lopez@aol.com','2'),
+('Daniel','Cabrera','1968/11/25','4574675','dcabrera@mct.com','2'),
+('Eduardo','Hernandez','1959/11/19','6833255','','2'),
+('Maidany','Gomez','1987/04/03','','maidany@aol.com','2'),
+('Manuel','Munoz','1986/07/02','','munoz@aol.com','2'),
+('Tomas','Guanche','1963/09/13','9876338','tguanche@mct.com','2'),
+('Hermes','Benavides','1964/08/08','3476290','hbenavides@mct.com','2'),
+('Yamila','Quiala','1969/09/05','3436322','yaquiala@mct.com','2'),
+('Boris Luis','Mora Rodriguez','1975/12/02','','borismora@aol.com','2'),
+('Roger','Sanchez','1996/07/28','','snachezr@aol.com','2'),
+('Joanne','Rodriguez','1983/10/23','','joanne@aol.com','2'),
+('System','Administrator','1983/10/24','7656855','niurkap@gmail.com','1'),
+('Khiara','Calvo','1983/10/25','5885434','kcalvo@ride2md.com','1'),
+('Mari','Del Valle','1983/10/26','4114013','mdelvalle@transportationamerica.com','1'),
+('Anabel','Abreu','1983/10/27','2342592','aabreu@transportationamerica.com','1'),
+('Paola','Mas Y Rubi','1983/10/28','4368906','pmasyrubi@fcchealthplan.com','1'),
+('Antonio','Altomare','1983/10/29','4684567','aaltomare@fcchealthplan.com','1'),
+('Eunice','Sarduy','1983/10/30','9697999','esarduy@canohealth.com','1'),
+('Zoemia','Gonzalez','1983/10/31','5685333','zgonzalez@transportationamerica.com','1'),
+('Lisset','Gonzalez','1983/11/01','4637784','lisset.gonzalez@gladeswestrehab.com','1');
+
+iNSERT INTO TravelStatus (Description) VALUES
+('Open'),
+('Active'),
+('Cancelled'),
+('Completed'),
+('Scheduled'),
+('Arrived')
+
+INSERT INTO Providers (Description,StreetAddress,PhoneNumber,ContactName,Email)VALUES
+('Reality Transportation','9456 NW 13 ST','305509','Ampara Medina','areatranson@yahoo.com'),
+('Hialeah Senior Club','2380-90 Palm Avenue','305885','Ailen Gonzalez','hialeahseniorclubinc@ymail.com'),
+('Liberty Transport USA Corp','1490 West 49th Place W 49th Pl','305218','Zulman Perez','libertyusa3121@gmail.com'),
+('Royal Transportation, LLC','13170 Southwest 128th Street SW 128th St','305964','Fernando Mendez','fmendez@royal-trans.com')
+
+INSERT  INTO Patient (FirstName,LastName,DoB,Identification,StreetAddress,PhoneNumber,Email,Plans,Gender) VALUES
+('FERNANDO','CUESTA','1946/02/08','223425','2700 NW 62nd St','786479','testing@testin.com','1','M'),
+('FRANCISCA','ESTRADA','1938/01/29','353536','17901 Northwest 68th Avenue','305548','','1','F'),
+('PUBLIO','LOPEZ','1954/06/10','325266','9714 Northwest 126th Terrace','786857','info@info.com','1','M'),
+('MARIA','PUPO','1961/01/22','242523','16016 Southwest 66th Terrace','786209','','4','F'),
+('AGUSTINA','FERNANDEZ','1948/07/05','266463','3331 NW 18th Terrace','786426','','2','F'),
+('VICTOR','TIRADO','2011/11/22','634788','1041 JEFFERSON DR APT G','786273','atirafo@fjha.com','5','M'),
+('BRENDEN','BENNINGER','2012/06/07','223523','172 SW 15TH RD','305910','kasf@kjas.com','5','M'),
+('JAREMY','RHODES','2010/12/10','745789','10960 SW 224th St','786352','jar@jaar.com','5','M'),
+('SEBASTIAN','BROWN JR','1949/10/24','967453','401 East Sample Road','954941','sebas@jul.com','4','M'),
+('CELESTINA','RIAL','1934/04/06','374484','70 E 10th St Apt 101','786728','oow@ois.com','2','F'),
+('ELSA','SILVA','1932/04/06','568568','7512 W 20TH AVE APT 202','305332','','3','F'),
+('TERESA','KUKELHAN','1954/12/20','843257','2801 NW 55th AV','954484','','3','F'),
+('CHRISTINE','MCKNIGHT','1957/05/03','854332','1864 NW 175TH ST','305624','chris@chir.com','3','F'),
+('MIRTA','DONATO','1942/12/18','547455','7221 West 30th Court','786877','hyuo@juk.com','6','F'),
+('LAUDELINA','DURAN','1933/12/04','457488','15955 Bass Creek Road','954437','kjhyu@jhu.com','2','F')
+
+INSERT INTO Plans (Description,InsurenceId)  VALUES 
+('Salud Global','1'),
+('Salud Clasica','2'),
+('Salud Global Mayores','3'),
+('Salud Clasica Mayores ','4'),
+('Salud Evoluciona','5'),
+('Plan Dental Ejecutivo','6')
+
+INSERT INTO Driver (DriverLicence,LicenceExpired,ProvidersId) VALUES 
+('Q536242844440','2025/12/04','4'),
+('S321541621100','2024/03/30','4'),
+('R140726540940','2022/03/29','2'),
+('O265330753760','2023/10/16','2'),
+('6832738833','2027/04/05','2'),
+('C512973773640','2025/10/04','2'),
+('V422423674710','2023/12/31','2'),
+('V225640790300','2026/01/30','2'),
+('A142200702230','2024/06/23','2'),
+('M78998900990','2022/05/30','3'),
+('L520520685220','2025/01/22','4'),
+('S260420962650','2022/07/25','4'),
+('L125241608740','2021/10/14','4'),
+('C166160684250','2027/11/20','3'),
+('H655200594190','2022/09/30','5'),
+('G524540876231','2027/04/03','3'),
+('M525541862420','2026/07/02','3'),
+('G525800633330','2027/09/13','2'),
+('B513320643080','2025/08/28','2'),
+('Q400960698251','2027/09/05','2'),
+('M663072754420','2022/12/02','5'),
+('S522720962680','2028/07/28','5'),
+('R362423838830','2024/10/23','5')
+
