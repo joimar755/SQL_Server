@@ -135,8 +135,7 @@ ALTER TABLE Users ALTER COLUMN DoB DATE not null;
 ALTER TABLE Driver ALTER COLUMN LicenceExpired date not null
 -- Añadir Relacion de las dos primary key
 ALTER TABLE Driver 
-ADD CONSTRAINT FK_Driver_Users 
-FOREIGN KEY (DriverId) REFERENCES  Users(UsersId)
+ADD FOREIGN KEY (DriverId) REFERENCES  Users(UsersId)
 
 --insert 
 /* 
