@@ -43,7 +43,6 @@ CREATE TABLE Driver(
   DriverLicence VARCHAR(100) not null,
   LicenceExpired date DEFAULT(getdate()) not null,
   ProvidersId int not null,
-  UsersId int not null,
   AddedOn date DEFAULT(getdate()) not null,
   Modified date DEFAULT(getdate()) not null,
   Active bit DEFAULT ((1)) not null,
