@@ -1,7 +1,5 @@
 /*
 USE Joimar_DIU;
-USE Joimar_DIU;
-
 CREATE TABLE TypeUser(
   TypeUserId int IDENTITY(1,1) PRIMARY KEY not null, 
   Description VARCHAR(100) not null,
@@ -39,16 +37,15 @@ CREATE TABLE Providers(
   Active bit DEFAULT ((1)) not null,
 ) 
 CREATE TABLE Driver(
-  DriverId int IDENTITY(1,1) PRIMARY KEY not null,
-  DriverLicence VARCHAR(100) not null,
-  LicenceExpired date DEFAULT(getdate()) not null,
-  ProvidersId int not null,
-  AddedOn date DEFAULT(getdate()) not null,
-  Modified date DEFAULT(getdate()) not null,
-  Active bit DEFAULT ((1)) not null,
-  FOREIGN KEY (ProvidersId) REFERENCES  Providers(ProvidersId),
-  FOREIGN KEY (DriverId) REFERENCES  Users(UsersId)
-  
+  DriverId int IDENTITY(1,1) PRIMARY KEY NOT NULL,
+  DriverLicence VARCHAR(100) NOT NULL,
+  LicenceExpired date DEFAULT(getdate()) NOT NULL,
+  ProvidersId int NOT NULL,
+  AddedOn date DEFAULT(getdate()) NOT NULL,
+  Modified date DEFAULT(getdate()) NOT NULL,
+  Active bit DEFAULT ((1)) NOT NULL,
+  FOREIGN KEY (ProvidersId) REFERENCES Providers(ProvidersId),
+  FOREIGN KEY (DriverId) REFERENCES Users(UsersId)
 )
 CREATE TABLE Insurence(
   InsurenceId int IDENTITY(1,1) PRIMARY KEY not null,
@@ -121,6 +118,7 @@ CREATE TABLE TravelSchedule(
   FOREIGN KEY (TypeTravelId) REFERENCES TypeTravel(TypeTravelId),
   FOREIGN KEY (UsersId) REFERENCES Users(UsersId),
   FOREIGN KEY (DriverId) REFERENCES Driver(DriverId)
+)
 )
 -- CAMBIAR EL TIPO DE DATO Y LA FECHA
 ALTER TABLE TravelSchedule ALTER COLUMN TotalTravel DECIMAL(10,0);
