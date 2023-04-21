@@ -130,3 +130,9 @@ GROUP BY ProvidersId
 
 SELECT * FROM  Providers p 
 
+
+SELECT TravelStatusId,  SUM(TotalTravel) AS SUMA
+FROM  TravelSchedule ts
+WHERE DataService  BETWEEN '2020-03-10' AND '2020-05-10'
+GROUP BY TravelStatusId  
+
