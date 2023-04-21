@@ -110,3 +110,23 @@ INSERT INTO Driver (DriverLicence,LicenceExpired,ProvidersId) VALUES
 ('S522720962680','2028/07/28','1'),
 ('R362423838830','2024/10/23','1')
 
+
+UPDATE TravelSchedule  SET TotalTravel = RAND()*1000
+WHERE TravelScheduleId in (
+SELECT TOP 50 TravelScheduleId  
+FROM TravelSchedule 
+WHERE TotalTravel  IS  NULL 
+ORDER BY NEWID())
+
+SELECT * 
+FROM TravelSchedule t
+WHERE ProvidersId > 2 AND  TravelStatusId = 4
+
+
+SELECT ProvidersId, COUNT(TravelScheduleId) AS CONTADOR
+FROM  TravelSchedule ts 
+WHERE ProvidersId > 2 AND  TravelStatusId = 4
+GROUP BY ProvidersId 
+
+SELECT * FROM  Providers p 
+
