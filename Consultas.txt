@@ -136,3 +136,21 @@ FROM  TravelSchedule ts
 WHERE DataService  BETWEEN '2020-03-10' AND '2020-05-10'
 GROUP BY TravelStatusId  
 
+INSERT INTO TravelStatus 
+(Description)
+VALUES('NoShow');
+
+SELECT ts.TravelStatusId, Description  
+FROM TravelSchedule ts 
+INNER JOIN TravelStatus t ON ts.TravelStatusId = t.TravelStatusId 
+GROUP BY ts.TravelStatusId ,Description 
+
+SELECT ts.TravelStatusId, Description, COUNT(TravelScheduleId) as "contar"  
+FROM TravelSchedule ts 
+RIGHT JOIN TravelStatus t ON ts.TravelStatusId = t.TravelStatusId 
+GROUP BY ts.TravelStatusId ,Description 
+
+SELECT ts.TravelStatusId, Description
+FROM  TravelStatus ts
+LEFT JOIN TravelSchedule t  ON ts.TravelStatusId = t.TravelStatusId 
+GROUP BY ts.TravelStatusId ,Description 
