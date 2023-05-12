@@ -160,3 +160,12 @@ FROM TravelSchedule ts
 INNER JOIN Patient p ON  ts.PatientId = p.PatientId
 INNER JOIN Users u ON  ts.DriverId = u.UsersId
 WHERE DATEDIFF(mi,Appointment,ArrivalTime) > 15 AND TravelStatusId in(4,3) 
+
+SELECT DATEADD(dd,10,DataService) newDate, DataService,GETDATE()  
+FROM TravelSchedule ts 
+
+SELECT DATEDIFF(mi,ArrivalTime,Appointment) Tiempo_en_recoger  
+FROM TravelSchedule ts 
+
+SELECT DATEPART(yy,DataService) Año  
+FROM TravelSchedule ts 
