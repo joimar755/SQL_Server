@@ -154,3 +154,9 @@ SELECT ts.TravelStatusId, Description
 FROM  TravelStatus ts
 LEFT JOIN TravelSchedule t  ON ts.TravelStatusId = t.TravelStatusId 
 GROUP BY ts.TravelStatusId ,Description 
+
+SELECT p.FirstName , u.FirstName, DataService ds , ArrivalTime at, Appointment ap
+FROM TravelSchedule ts 
+INNER JOIN Patient p ON  ts.PatientId = p.PatientId
+INNER JOIN Users u ON  ts.DriverId = u.UsersId
+WHERE DATEDIFF(mi,Appointment,ArrivalTime) > 15 AND TravelStatusId in(4,3) 
