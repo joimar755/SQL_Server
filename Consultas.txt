@@ -169,3 +169,23 @@ FROM TravelSchedule ts
 
 SELECT DATEPART(yy,DataService) Año  
 FROM TravelSchedule ts 
+
+--2
+SELECT DATEADD(dd,-9, DataService) AS fecha_Programacion,DataService AS Fecha_servicio,
+p.FirstName AS Nombre_Paciente, p.LastName  AS Apellido_paciente, u.FirstName  AS Nombre_Driver, u.LastName AS Apellido_Driver,
+PUStreetAddress As Direccion_de_recogida, ArrivelStreetAddress AS Direccion_de_destino
+FROM TravelSchedule ts 
+INNER JOIN  Patient p ON ts.PatientId = p.PatientId  
+INNER JOIN  Users u  ON ts.DriverId  = u.UsersId 
+INNER JOIN  Providers p2 ON  ts.ProvidersId = p2.ProvidersId 
+WHERE p2.ProvidersId = 4 
+--4
+SELECT   DataService, p2.Description, CONCAT(p.FirstName,' ', p.LastName) Patient, PickUpTime, ArrivalTime, 
+		CASE
+		WHEN DATEDIFF(MINUTE, PickUpTime,ArrivalTime) >= 2 AND DATEDIFF(MINUTE, PickUpTime,ArrivalTime) <= 25 THEN 'Corto'
+		WHEN DATEDIFF(MINUTE, PickUpTime,ArrivalTime) >= 26 AND DATEDIFF(MINUTE, PickUpTime,ArrivalTime) <= 60 THEN 'Medio'
+		WHEN DATEDIFF(MINUTE, PickUpTime,ArrivalTime) > 60 THEN 'Largo' 
+		END AS "Duracion"
+	FROM TravelSchedule   ts
+	INNER JOIN Patient p ON ts.PatientId = p.PatientId
+	INNER JOIN Providers p2  ON ts.ProvidersId = p2.ProvidersId
