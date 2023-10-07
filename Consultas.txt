@@ -188,4 +188,11 @@ SELECT   DataService, p2.Description, CONCAT(p.FirstName,' ', p.LastName) Patien
 		END AS "Duracion"
 	FROM TravelSchedule   ts
 	INNER JOIN Patient p ON ts.PatientId = p.PatientId
-	INNER JOIN Providers p2  ON ts.ProvidersId = p2.ProvidersId
+	INNER JOIN Providers p2  ON ts.ProvidersId = p2.ProvidersIdSELECT rol.id, r.name, u.name
+--leranmot
+FROM role_users rol
+INNER JOIN roles r ON rol.role_id  = r.id
+INNER JOIN users u ON rol.user_id  = u.id
+GROUP BY rol.id
+
+
