@@ -190,6 +190,7 @@ SELECT   DataService, p2.Description, CONCAT(p.FirstName,' ', p.LastName) Patien
 	INNER JOIN Patient p ON ts.PatientId = p.PatientId
 	INNER JOIN Providers p2  ON ts.ProvidersId = p2.ProvidersIdSELECT rol.id, r.name, u.name
 --leranmot
+SELECT rol.id as role,r.id as id_rol, r.name as roles, u.name as nombre_usuarios
 FROM role_users rol
 INNER JOIN roles r ON rol.role_id  = r.id
 INNER JOIN users u ON rol.user_id  = u.id
